@@ -27,4 +27,21 @@
 		</div>
 	</div>
 </body>
+<script>
+const modal_overlay = document.querySelector(".modal-overlay");
+const button_modal = document.querySelector(".modal-btn");
+const button_close = document.querySelector(".close-btn");
+
+button_modal.addEventListener("click", function() {
+	if (!modal_overlay.classList.contains("open-modal")) {
+		modal_overlay.classList.add("open-modal");
+	}
+});
+
+button_close.addEventListener("click", function() {
+	if (modal_overlay.classList.contains("open-modal")) {
+		modal_overlay.classList.remove("open-modal");
+	}
+});
+</script>
 </html>
